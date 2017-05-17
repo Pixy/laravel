@@ -6,6 +6,8 @@ machine:
 dependencies:
   pre:
     - cp .env.example .env
+  post:
+    - php artisan key:generate
 test:
   override:
     - vendor/bin/phpunit --verbose
