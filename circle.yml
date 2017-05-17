@@ -3,6 +3,9 @@ machine:
     version: 7.0.4
   timezone:
     America/Los_Angeles
+dependencies:
+  pre:
+    - cp .env.example .env
 test:
   override:
     - vendor/bin/phpunit --verbose
